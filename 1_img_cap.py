@@ -67,9 +67,9 @@ while(True):
         # draw the segmented hand
         cv2.rectangle(frame, (left, top), (right, bottom), (0,255,0), 2)
 
-        cv2.imshow("Video Feed 1", gray)
+        cv2.imshow("Video Feed 1", gray)   #display the resized frame
 
-        cv2.imshow("Video Feed", frame)
+        cv2.imshow("Video Feed", frame)   #display the whole camera frame
         # observe the keypress by the user
         keypress = cv2.waitKey(1)
 
