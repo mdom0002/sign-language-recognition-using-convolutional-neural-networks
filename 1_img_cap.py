@@ -40,7 +40,7 @@ while(True):
     i=0   #i initialized as 0 which would be the name of the first jpg file
 
     while(True):
-        (t, frame) = camera.read()
+        (t, frame) = camera.read()   #capture frame by frame
 
         
 
@@ -51,21 +51,21 @@ while(True):
         roi = frame[top:bottom, right:left]
 
         # convert the roi to grayscale and blur it
-        gray = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
-        gray = cv2.GaussianBlur(gray, (7, 7), 0)
+        gray = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)   #convert image from one color space to another, in this case to gray scale, COLOR_BGR2GRAY color space
+        gray = cv2.GaussianBlur(gray, (7, 7), 0)   #blur(smoothen) the image to remove gaussian noise - (7,7) specifies the deviations in x & y coordinates
 
         #resize img
-        gray = cv2.resize(gray, (IMG_SIZE,IMG_SIZE))
+        gray = cv2.resize(gray, (IMG_SIZE,IMG_SIZE))   #resize image to IMG_SIZE which is initialised as 96
 
         #write img file to directory
         cv2.imwrite("%s/%s/%d.jpg"%(dir0,a,i),gray)   #write the image to %s/%s/%d.jpg which would be replaced by dir0/a/i.jpg - eg: ImageProcessing/Signs/0.jpg
         i+=1   #increment value of i  ,ie, i = i + 1
         print(i)
-        if i>500:
+        if i>500:    #if number of images > 500, break from loop
             break
 
         # draw the segmented hand
-        cv2.rectangle(frame, (left, top), (right, bottom), (0,255,0), 2)
+        cv2.rectangle(frame, (left, top), (right, bottom), (0,255,0), 2)    #draw rectangle on frame, (0,255,0) is color code for green , 2 is the thickness
 
         cv2.imshow("Video Feed 1", gray)   #display the resized frame
 
