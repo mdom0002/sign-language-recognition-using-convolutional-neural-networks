@@ -5,8 +5,8 @@ import os
 
 IMG_SIZE=96
 
-# region of interest (ROI) coordinates
-top, right, bottom, left = 100, 150, 400, 450
+# region of interest (ROI) coordinates  - a sample area within the area of an image - in this case, the green rectangle which you see in the camera
+top, right, bottom, left = 100, 150, 400, 450    
 
 exit_con='**'
 
