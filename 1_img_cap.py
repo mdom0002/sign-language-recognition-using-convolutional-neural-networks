@@ -20,7 +20,7 @@ except:
     print('contain folder in same name')   #if a folder already exists then print
 
 # get the reference to the webcam
-camera = cv2.VideoCapture(0)
+camera = cv2.VideoCapture(0)   #capture video with device index 0 - index specifies which camera you are refering to
 
 while(True):
 
