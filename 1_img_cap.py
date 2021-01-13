@@ -29,7 +29,7 @@ while(True):
     if a==exit_con:       #if user input is **, break from the loop
         break
 
-    dir1=str(dir0)+'/'+str(a)    #dir1 = directoryname given before as dir0 / label name given as a -basically makes a path- eg: ImageProcessing/Signs
+    dir1=str(dir0)+'/'+str(a)    #dir1 = directoryname given before as dir0 / label name given as a -basically makes a path- eg: ImageProcessing/A
     print(dir1)    
 
     try:
@@ -58,7 +58,7 @@ while(True):
         gray = cv2.resize(gray, (IMG_SIZE,IMG_SIZE))   #resize image to IMG_SIZE which is initialised as 96
 
         #write img file to directory
-        cv2.imwrite("%s/%s/%d.jpg"%(dir0,a,i),gray)   #write the image to %s/%s/%d.jpg which would be replaced by dir0/a/i.jpg - eg: ImageProcessing/Signs/0.jpg
+        cv2.imwrite("%s/%s/%d.jpg"%(dir0,a,i),gray)   #write the image to %s/%s/%d.jpg which would be replaced by dir0/a/i.jpg - eg: ImageProcessing/A/0.jpg
         i+=1   #increment value of i  ,ie, i = i + 1
         print(i)
         if i>500:    #if number of images > 500, break from loop
