@@ -27,6 +27,6 @@ def create_train_data():      #function header
     shuffle(training_data)              #shuffle the array
     np.save('train_data.npy', training_data)   #save array to binary file in numpy format
     print(training_data)
-    return training_data                      #return thr array with images and labels
+    return training_data                      #return the array containing images and labels
 
 create_train_data()                             #call the function
