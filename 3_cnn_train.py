@@ -3,7 +3,7 @@ import cv2                 # working with, mainly resizing, images
 import numpy as np         # dealing with arrays
 import os                  # dealing with directories
 
-import tflearn
+import tflearn             #deep learning library 
 from tflearn.layers.conv import conv_2d, max_pool_2d
 from tflearn.layers.core import input_data, dropout, fully_connected
 from tflearn.layers.estimator import regression
